@@ -46,7 +46,7 @@ E-Commerce/
 #### Clone the Repository
 
 ```sh
- git clone 
+ git clone https://github.com/AL-ETERNITY/ECOMMERCE-APP.git
  cd ECOMMERCE-APP
 ```
 
