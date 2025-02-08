@@ -46,8 +46,8 @@ E-Commerce/
 #### Clone the Repository
 
 ```sh
- git clone https://github.com/Bhupesh-Khordia/E-Commerce.git
- cd E-Commerce
+ git clone 
+ cd ECOMMERCE-APP
 ```
 
 #### Frontend Setup
