@@ -5,7 +5,7 @@ import { ShopContext } from '../context/ShopContext';
 
 const Navbar = () => {
     const [visible, setVisible] = useState(false);
-    const {setShowSearch, getCartCount, navigate, token, setToken, setCartItems} = useContext(ShopContext);
+    const {setShowSearch, getCartCount, navigate, token, setToken, setCartItems, adminUrl} = useContext(ShopContext);
 
     const logout = () => {
         navigate('/login');
@@ -35,6 +35,14 @@ const Navbar = () => {
                 <p>CONTACT</p>
                 <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden' />
             </NavLink>
+            <button
+              onClick={() => {
+                window.location.href = adminUrl;
+              }}
+              className=" border-1 border-gray-400 px-4 py-1.5 ml-6 text-sm hidden sm:block rounded-4xl cursor-pointer"
+            >
+              Admin Panel
+            </button>
         </ul>
         <div className='flex items-centre gap-6'>
             <img onClick={()=>setShowSearch(true)} src={assets.search_icon} alt='' className='w-5 cursor-pointer' />
@@ -45,7 +53,6 @@ const Navbar = () => {
                 {token && 
                 <div className='group-hover:block hidden absolute right-0 pt-4'>
                     <div className='flex flex-col gap-2 w-36 py-3 px-5 bg-slate-100 text-gray-500 rounded'>
-                        <p className='cursor-pointer hover:text-black'>My Profile</p>
                         <p onClick={()=>navigate('/orders')} className='cursor-pointer hover:text-black'>Orders</p>
                         <p onClick={logout} className='cursor-pointer hover:text-black'>Logout</p>
                     </div>
@@ -67,6 +74,7 @@ const Navbar = () => {
                 <NavLink onClick={()=>setVisible(false)} className='py-2 pl-6 border' to='/collection'>COLLECTION</NavLink>
                 <NavLink onClick={()=>setVisible(false)} className='py-2 pl-6 border' to='/about'>ABOUT</NavLink>
                 <NavLink onClick={()=>setVisible(false)} className='py-2 pl-6 border' to='/contact'>CONTACT</NavLink>
+                <button onClick={() => {setVisible(false); window.location.href = adminUrl; }} className='py-2 pl-6 border'>Admin Panel</button>
             </div>
         </div>
     </div>
