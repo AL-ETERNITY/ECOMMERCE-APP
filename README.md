@@ -1,6 +1,6 @@
 # FOREVER - E-Commerce Website
 
-Sleek is a modern e-commerce platform built using the MERN stack (MongoDB, Express.js, React.js, Node.js). It provides a seamless shopping experience with a sleek UI and robust backend.
+FOREVER is a modern e-commerce platform built using the MERN stack (MongoDB, Express.js, React.js, Node.js). It provides a seamless shopping experience with a sleek UI and robust backend.
 
 ## 🔗 **Live Link:** [FOREVER](https://ecommerce-app-frontend-smoky.vercel.app/)
 
